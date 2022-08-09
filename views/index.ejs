@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Recipes</title>
+</head>
+<body>
+
+    <!-- Header elements -->
+    <header>
+        <nav class="nav-container">
+            <h1 class="title">Recipes</h1>
+
+            <!-- Nav links goes here -->
+
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="/add-product">Add</a></li>
+                <li class="nav-item"><a href="#">Edit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content  -->
+    <div class="recipe-container">
+       
+        <% for( let recipe of recipes) { %>
+            
+            <div class="recipe">
+                <div class="recipe-header">
+                    <h3 class="name">
+                        <%= recipe.title %> 
+                    </h3>
+                    <button class="more-btn">Read More</button>
+                    <div class="btn-container">
+  
+                        <form action="/delete/<%= recipe.id %>" method="post">
+                            <button class="delete-btn">Delete</button>
+                        </form>
+                    </div>
+                </div>
+
+                <p class="instructions"> <%= recipe.instructions %>  </p>
+
+            </div>
+
+        <% } %>
+
+
+
+            
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Recipes</title>
+</head>
+<body>
+
+    <!-- Header elements -->
+    <header>
+        <nav class="nav-container">
+            <h1 class="title">Recipes</h1>
+
+            <!-- Nav links goes here -->
+
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#">Home</a></li>
+                <li class="nav-item"><a href="#">Add</a></li>
+                <li class="nav-item"><a href="#">Edit</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2 class="form-title">Add Dishes</h2>
+        <form action="/add-product" method="post" class="form">
+            <div class="form-el">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" placeholder="Enter title">
+            </div>
+
+            <div class="form-el">
+
+             <label for="description">Description</label>
+             <input type="text" name="description" id="description" placeholder="Dish description">
+            </div>
+
+            <div class="form-el">
+                <button type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>
